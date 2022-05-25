@@ -12,9 +12,15 @@ var config = {
 	 }
 }
 
-function initializeKeycloak(){
+function initializeKeycloak(app) {
  var memoryStore = new session.MemoryStore();
-	key_cloak =  new Keycloack({store:memoryStore},config);
+ app.use(session({
+  secret: process.env.SESSION_SECRETE,
+  resave: false,
+  saveUninitialized: true,
+  store: memoryStore
+ }))
+ key_cloak = new Keycloack({ store: memoryStore }, config);
  return key_cloak;
 }
 function getKeycloak(){

@@ -17,5 +17,8 @@ router.get('/admin',keycloak.protect('admin'),function(req,res){
 router.get('/all-user',keycloak.protect(['user','admin']),function(req,res){
  res.send('All user permission')
 })
+router.get('/protected',keycloak.protect(),(req,res)=>{
+ res.send('<h1>Welcome You are logged in</h1> | <a href="/logout">Logout</a>');
+})
 
 module.exports = router;
