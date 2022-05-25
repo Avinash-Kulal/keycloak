@@ -1,0 +1,27 @@
+{
+  "name": "keycloak",
+  "version": "1.0.0",
+  "description": "Keycloack with Node.js express app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Avinash-Kulal/keycloak.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Avinash-Kulal/keycloak/issues"
+  },
+  "homepage": "https://github.com/Avinash-Kulal/keycloak#readme",
+  "dependencies": {
+    "dotenv-defaults": "^5.0.0",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "keycloak-connect": "^18.0.0"
+  }
+}
