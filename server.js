@@ -9,7 +9,7 @@ const authRouter = require('./router');
 
 
 app.get('/',(req,res)=>{
-	res.send('Welcom');
+	res.send('Welcome');
 });
 
 
