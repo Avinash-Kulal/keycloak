@@ -7,6 +7,7 @@ router.get('/anonymous',function(req,res){
 })
 
 router.get('/user',keycloak.protect('user'),function(req,res){
+ console.log(req.kauth)
  res.send('User permission')
 })
 
