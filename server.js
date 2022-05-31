@@ -9,7 +9,7 @@ app.use(keycloak.middleware({
 
 
 app.get('/',(req,res)=>{
-	res.send('Home page')
+	res.send('<h3>Home page <a href="/login" > Login</a></h3>')
 })
 app.get('/login',(req,res)=>{
  return res.redirect(process.env.SERVER_LOGIN_URL)
